@@ -53,7 +53,8 @@ def pa():
                         QMessageBox(QMessageBox.Critical, 'Hiba', 'A blueprint nem értelmezhető! (üres, hibás, nem blueprint, stb...)', QMessageBox.Ok, w).exec_()
                         pass
                     else:
-                        n = basename(file).split('.'); n[0] += '_backup'
+                        n = basename(file).split('.')
+                        n[0] += '_backup'
                         try:
                             copy2(file, dirname(file)+'/'+('.'.join(n)))
                         except:
@@ -70,7 +71,8 @@ def pa():
                             with open(file, 'w') as f:
                                 dump(data, f, separators=(",", ":"))
                         except:
-                            QMessageBox(QMessageBox.Critical, 'Hiba', 'A blueprint módosítása sikertelen!', QMessageBox.Ok, w).exec_(); pass
+                            QMessageBox(QMessageBox.Critical, 'Hiba', 'A blueprint módosítása sikertelen!', QMessageBox.Ok, w).exec_()
+                            pass
                         else:
                             QMessageBox(QMessageBox.Information, 'Információ', 'Festés sikeres!', QMessageBox.Ok, w).exec_()
         else:
