@@ -48,7 +48,8 @@ def pa():
                             for j in range(len(data['bodies'][i]['childs'])):
                                 data['bodies'][i]['childs'][j]['color'] = c
                         if 'joints' in data:
-                            for i in range(len(data['joints'])): data['joints'][i]['color'] = c
+                            for i in range(len(data['joints'])):
+                                data['joints'][i]['color'] = c
                     except:
                         QMessageBox(QMessageBox.Critical, 'Hiba', 'A blueprint nem értelmezhető! (üres, hibás, nem blueprint, stb...)', QMessageBox.Ok, w).exec_()
                         pass
