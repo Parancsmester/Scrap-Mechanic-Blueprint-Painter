@@ -8,7 +8,8 @@ from json import load, dump
 
 c = None
 p = f'{environ["APPDATA"]}/Axolot Games/Scrap Mechanic/User/'
-blueprint_path = f'{p}{listdir(p)[0]}/Blueprints/'; l = listdir(blueprint_path)
+blueprint_path = f'{p}{listdir(p)[0]}/Blueprints/'
+l = listdir(blueprint_path)
 b = {}
 
 app = QApplication([], styleSheet='QComboBox QAbstractItemView {background: #d3d3d3; border: 1px solid grey;}')
