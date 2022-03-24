@@ -82,8 +82,10 @@ def pa():
 for i in l:
     if isdir(f'{blueprint_path}{i}'):
         with open(f'{blueprint_path}{i}/description.json', 'r', encoding='utf-8') as f:
-            try: d = load(f)
-            except: pass
+            try:
+                d = load(f)
+            except:
+                pass
             else:
                 b[d['name']] = f'{blueprint_path}{i}'
                 try:
